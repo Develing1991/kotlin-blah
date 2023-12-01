@@ -28,7 +28,7 @@ class Exam08{
         val strLocalDateTime = toLocalDateTimeString(store.registeredAt)
     }
 
-    fun toLocalDateTimeString(localDateTime: LocalDateTime? = LocalDateTime.of(2022,2,1,12,22,22)): String{
+    fun toLocalDateTimeString(localDateTime: LocalDateTime? = LocalDateTime.of(2020,1,1,1,1,1)): String{
         /*
         var temp = if(localDateTime == null){
             LocalDateTime.now() // return 없어도 됨
@@ -37,10 +37,10 @@ class Exam08{
         }
         */
 
-         var temp = localDateTime ?: LocalDateTime.now() // 더 줄일 수 있음
-
-        return temp.format(DateTimeFormatter.ofPattern("yyyy MM dd"))
-        // return (localDateTime ?: LocalDateTime.now())
+        // 더 줄일 수 있음
+         // var temp = localDateTime ?: LocalDateTime.now()
+         // return temp.format(DateTimeFormatter.ofPattern("yyyy MM dd"))
+         return (localDateTime ?: LocalDateTime.now()).format(DateTimeFormatter.ofPattern("yyyy MM dd"))
     }
 }
 
