@@ -6,7 +6,10 @@ fun main(){
         this.name
         name
         "마지막줄 리턴"
+        this
     }
+
+
     println(userDto)
 
     val x = 10
